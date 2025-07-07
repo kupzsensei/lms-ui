@@ -11,6 +11,7 @@ import Dashboard from "./pages/dashbord/index.jsx";
 import SectionTab from "./pages/dashbord/sections/index.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SubjectTab from "./pages/dashbord/subjects/index.jsx";
+import SectionDetailedPage from "./pages/dashbord/sections/detailed-page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "", element: <Dashboard /> },
-      { path: "sections", element: <SectionTab /> },
+      {
+        path: "sections",
+        element: <SectionTab />,
+      },
+      { path: "sections/:id", element: <SectionDetailedPage /> },
       { path: "subjects", element: <SubjectTab /> },
     ],
   },

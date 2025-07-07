@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getSectionAPI } from "../../../api/section";
 import { useState } from "react";
 import CreateSectionModal from "./create-section-modal";
+import { Link } from "react-router-dom";
 
 export default function SectionTab() {
   const [createModal, setCreateModal] = useState(false);
@@ -35,6 +36,9 @@ export default function SectionTab() {
             <tr key={obj.id} className="hover:text-blue-500 cursor-pointer">
               <td className="p-2">{obj.name}</td>
               <td className="p-2">{obj.school_year}</td>
+              <td className="p-2 cursor-pointer text-blue-600 underline">
+                <Link to={`/sections/${obj.id}`}>Detail</Link>
+              </td>
             </tr>
           ))}
         </tbody>

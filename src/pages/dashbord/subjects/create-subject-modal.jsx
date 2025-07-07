@@ -39,13 +39,13 @@ export default function CreateSubjectModal({ close }) {
           name="name"
           className="p-2 border-gray-400 border rounded-sm"
           type="text"
-          placeholder="Enter Section Name"
+          placeholder="Enter subject name"
         />
         <input
           name="description"
           className="p-2 border-gray-400 border rounded-sm"
           type="text"
-          placeholder="School Year (e.g. 2025-2026)"
+          placeholder="Description"
         />
         <select
           name="teacher"

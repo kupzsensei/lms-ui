@@ -21,7 +21,7 @@ export default function SubjectTab() {
           onClick={() => setCreateModal(!createModal)}
           className="p-2 bg-green-400 text-white font-bold"
         >
-          add section
+          add subject
         </button>
       </div>
       <table className="table-auto border-collapse    border-gray-400 ">
